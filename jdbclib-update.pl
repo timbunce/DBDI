@@ -31,7 +31,7 @@ my $outdir = 'jdbclib';
 system qq{rm -rf $outdir.prev} if -d "$outdir.prev";
 system qq{mv -f $outdir $outdir.prev} if -d $outdir;
 
-system qq{perl -java2perl6api --add_types jdbclib-typemap --outdir $outdir @ARGV java.sql.DriverManager};
+system qq{perl java2perl6api --add_types jdbclib-typemap --outdir $outdir @ARGV java.sql.DriverManager};
 
 system qq{diff -wr --exclude=*.pir -u $outdir.prev $outdir} || warn "Output differs\n"
     if -d "$outdir.prev";
