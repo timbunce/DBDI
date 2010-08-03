@@ -117,14 +117,15 @@ class DBDI_pg::Driver does java::sql::Driver {
     ) {
         say "> connect '$url'";
 
-        return fail() if not $url ~~ s/^dbdi\:postgres\://;
+        fail if not $url ~~ /^'dbdi:postgres:'/;
+        $url .= substr($/.to); # remove the matched string
 
         my $conninfo = "host=localhost $url user=$prop.<user> password=$prop.<password>";
         say "- connect '$conninfo'";
         my $db_conn = PQconnectdb($conninfo);
         if (PQstatus($db_conn) != CONNECTION_OK) {
             my $msg = PQerrorMessage($db_conn);
-            die sprintf( "Connection to database ($conninfo) failed: %s %s", $msg, PQstatus($db_conn));
+            die sprintf( "Connection to database using '$conninfo' failed (status %s): %s", PQstatus($db_conn), $msg);
         }
         my DBDI_pg::Connection $conn .= new( :$db_conn );
 
