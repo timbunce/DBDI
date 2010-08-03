@@ -1,0 +1,13 @@
+
+Establish a naming convention for files
+    DBDI.pm6        = Driver manager class
+    DBDI/$driver/*  = Driver files (convention only to aid discovery, not required)
+    DBDIguts/*      = base classes/roles
+
+
+Establish base classes/roles
+
+
+Establish exception hierarchy
+    (maybe hardwire till java2perl6api can do this for us)
+    Start using the exception hierarchy
