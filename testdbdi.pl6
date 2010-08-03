@@ -1,7 +1,7 @@
 use v6;
 
 use DBDI;
-use DBDI_pg;
+use DBDI::pglibpq::Driver;
 
 # e.g. "dbdi:postgres:dbname=$dbname"
 my $url = @*ARGS.shift || prompt "Enter a 'dbdi:driver:...' URL: ";
