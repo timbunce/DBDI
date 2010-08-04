@@ -11,3 +11,6 @@ Establish base classes/roles
 Establish exception hierarchy
     (maybe hardwire till java2perl6api can do this for us)
     Start using the exception hierarchy
+
+Consider ways to abstract tracing out of the drivers.
+    Perhaps via a wrapper driver like http://www.p6spy.com/ ?
