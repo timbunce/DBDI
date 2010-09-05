@@ -9,13 +9,13 @@ use   java::sql::Wrapper;
 
 role java::sql::ParameterMetaData does java::sql::Wrapper  {
 
-    method parameterNoNulls (--> Int) is export { ... }
-    method parameterNullable (--> Int) is export { ... }
-    method parameterNullableUnknown (--> Int) is export { ... }
-    method parameterModeUnknown (--> Int) is export { ... }
-    method parameterModeIn (--> Int) is export { ... }
-    method parameterModeInOut (--> Int) is export { ... }
-    method parameterModeOut (--> Int) is export { ... }
+    method parameterNoNulls (--> Int) is export { 0 }
+    method parameterNullable (--> Int) is export { 1 }
+    method parameterNullableUnknown (--> Int) is export { 2 }
+    method parameterModeUnknown (--> Int) is export { 0 }
+    method parameterModeIn (--> Int) is export { 1 }
+    method parameterModeInOut (--> Int) is export { 2 }
+    method parameterModeOut (--> Int) is export { 4 }
 
     method getParameterClassName (
         Int $v1,  # int

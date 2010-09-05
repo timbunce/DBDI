@@ -12,13 +12,13 @@ use   java::sql::Wrapper;
 
 role java::sql::Statement does java::sql::Wrapper  {
 
-    method CLOSE_CURRENT_RESULT (--> Int) is export { ... }
-    method KEEP_CURRENT_RESULT (--> Int) is export { ... }
-    method CLOSE_ALL_RESULTS (--> Int) is export { ... }
-    method SUCCESS_NO_INFO (--> Int) is export { ... }
-    method EXECUTE_FAILED (--> Int) is export { ... }
-    method RETURN_GENERATED_KEYS (--> Int) is export { ... }
-    method NO_GENERATED_KEYS (--> Int) is export { ... }
+    method CLOSE_CURRENT_RESULT (--> Int) is export { 1 }
+    method KEEP_CURRENT_RESULT (--> Int) is export { 2 }
+    method CLOSE_ALL_RESULTS (--> Int) is export { 3 }
+    method SUCCESS_NO_INFO (--> Int) is export { -2 }
+    method EXECUTE_FAILED (--> Int) is export { -3 }
+    method RETURN_GENERATED_KEYS (--> Int) is export { 1 }
+    method NO_GENERATED_KEYS (--> Int) is export { 2 }
 
     method addBatch (
         Str $v1,  # java.lang.String

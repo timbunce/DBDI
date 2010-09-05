@@ -8,7 +8,7 @@ use v6;
 
 role java::sql::Date does DateTime  {
 
-    method serialVersionUID (--> Int) is export { ... }
+    method serialVersionUID (--> Int) is export { 1511598038487230103 }
 
     multi method new (
         Int $v1,  # long

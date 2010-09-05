@@ -9,9 +9,9 @@ use   java::sql::Wrapper;
 
 role java::sql::ResultSetMetaData does java::sql::Wrapper  {
 
-    method columnNoNulls (--> Int) is export { ... }
-    method columnNullable (--> Int) is export { ... }
-    method columnNullableUnknown (--> Int) is export { ... }
+    method columnNoNulls (--> Int) is export { 0 }
+    method columnNullable (--> Int) is export { 1 }
+    method columnNullableUnknown (--> Int) is export { 2 }
 
     method getCatalogName (
         Int $v1,  # int

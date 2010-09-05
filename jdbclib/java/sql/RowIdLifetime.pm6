@@ -9,11 +9,11 @@ use   java::lang::Enum;
 
 role java::sql::RowIdLifetime does java::lang::Enum  {
 
-    method ROWID_UNSUPPORTED (--> java::sql::RowIdLifetime) is export { ... }
-    method ROWID_VALID_OTHER (--> java::sql::RowIdLifetime) is export { ... }
-    method ROWID_VALID_SESSION (--> java::sql::RowIdLifetime) is export { ... }
-    method ROWID_VALID_TRANSACTION (--> java::sql::RowIdLifetime) is export { ... }
-    method ROWID_VALID_FOREVER (--> java::sql::RowIdLifetime) is export { ... }
+    method ROWID_UNSUPPORTED (--> java::sql::RowIdLifetime) is export { ...  }
+    method ROWID_VALID_OTHER (--> java::sql::RowIdLifetime) is export { ...  }
+    method ROWID_VALID_SESSION (--> java::sql::RowIdLifetime) is export { ...  }
+    method ROWID_VALID_TRANSACTION (--> java::sql::RowIdLifetime) is export { ...  }
+    method ROWID_VALID_FOREVER (--> java::sql::RowIdLifetime) is export { ...  }
 
     method valueOf (
         Str $v1,  # java.lang.String

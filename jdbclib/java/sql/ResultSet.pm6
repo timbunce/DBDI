@@ -19,16 +19,16 @@ use   java::sql::Wrapper;
 
 role java::sql::ResultSet does java::sql::Wrapper  {
 
-    method FETCH_FORWARD (--> Int) is export { ... }
-    method FETCH_REVERSE (--> Int) is export { ... }
-    method FETCH_UNKNOWN (--> Int) is export { ... }
-    method TYPE_FORWARD_ONLY (--> Int) is export { ... }
-    method TYPE_SCROLL_INSENSITIVE (--> Int) is export { ... }
-    method TYPE_SCROLL_SENSITIVE (--> Int) is export { ... }
-    method CONCUR_READ_ONLY (--> Int) is export { ... }
-    method CONCUR_UPDATABLE (--> Int) is export { ... }
-    method HOLD_CURSORS_OVER_COMMIT (--> Int) is export { ... }
-    method CLOSE_CURSORS_AT_COMMIT (--> Int) is export { ... }
+    method FETCH_FORWARD (--> Int) is export { 1000 }
+    method FETCH_REVERSE (--> Int) is export { 1001 }
+    method FETCH_UNKNOWN (--> Int) is export { 1002 }
+    method TYPE_FORWARD_ONLY (--> Int) is export { 1003 }
+    method TYPE_SCROLL_INSENSITIVE (--> Int) is export { 1004 }
+    method TYPE_SCROLL_SENSITIVE (--> Int) is export { 1005 }
+    method CONCUR_READ_ONLY (--> Int) is export { 1007 }
+    method CONCUR_UPDATABLE (--> Int) is export { 1008 }
+    method HOLD_CURSORS_OVER_COMMIT (--> Int) is export { 1 }
+    method CLOSE_CURSORS_AT_COMMIT (--> Int) is export { 2 }
 
     method absolute (
         Int $v1,  # int

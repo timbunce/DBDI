@@ -17,11 +17,11 @@ use   java::sql::Wrapper;
 
 role java::sql::Connection does java::sql::Wrapper  {
 
-    method TRANSACTION_NONE (--> Int) is export { ... }
-    method TRANSACTION_READ_UNCOMMITTED (--> Int) is export { ... }
-    method TRANSACTION_READ_COMMITTED (--> Int) is export { ... }
-    method TRANSACTION_REPEATABLE_READ (--> Int) is export { ... }
-    method TRANSACTION_SERIALIZABLE (--> Int) is export { ... }
+    method TRANSACTION_NONE (--> Int) is export { 0 }
+    method TRANSACTION_READ_UNCOMMITTED (--> Int) is export { 1 }
+    method TRANSACTION_READ_COMMITTED (--> Int) is export { 2 }
+    method TRANSACTION_REPEATABLE_READ (--> Int) is export { 4 }
+    method TRANSACTION_SERIALIZABLE (--> Int) is export { 8 }
 
     method clearWarnings (
     ) { ... } # throws java.sql.SQLException

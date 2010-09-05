@@ -10,7 +10,7 @@ class java::sql::Driver { ... };
 
 role java::sql::DriverManager {
 
-    method SET_LOG_PERMISSION (--> Any) is export { ... }
+    method SET_LOG_PERMISSION (--> Any) is export { ...  }
 
     method deregisterDriver (
         java::sql::Driver $v1,  # java.sql.Driver
