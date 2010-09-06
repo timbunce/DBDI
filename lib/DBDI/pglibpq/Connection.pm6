@@ -1,12 +1,13 @@
 use v6;
 
+use DBDI::pglibpq::libpq;
+
 use java::sql::Driver;
 use java::sql::Connection;
 use java::sql::Statement;
 use java::sql::ResultSet;
 use java::sql::ResultSetMetaData;
 
-use libpq;
 
 class DBDI::pglibpq::ResultSetMetaData does java::sql::ResultSetMetaData {
     has $conn;

@@ -1,4 +1,4 @@
-module libpq;
+module DBDI::pglibpq::libpq;
 
 use NativeCall;  # from project 'zavolaj'
 
