@@ -4,7 +4,10 @@ use DBDI;
 use DBDI::pglibpq;
 use DBDI::p5dbi;
 
-# e.g. "dbdi:postgres:dbname=$dbname"
+say "Examples:";
+say "   dbdi:pglibpq:dbname=zavolaj";
+say "   dbi:SQLite:dbname=foo";
+
 my $url = @*ARGS.shift || prompt "Enter a 'dbdi:driver:...' URL: ";
 
 my $con = DBDI::DriverManager.getConnection($url, 'testuser', 'testpass');
