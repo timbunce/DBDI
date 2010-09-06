@@ -1,8 +1,12 @@
 
 Establish a naming convention for files
-    DBDI.pm6        = Driver manager class
-    DBDI/$driver/*  = Driver files (convention only to aid discovery, not required)
-    DBDIguts/*      = base classes/roles
+    DBDI.pm6         = DriverManager class
+    DBDI/$driver.pm6 = "A driver" (convention only to aid discovery, not required)
+    DBDI/$driver/*   = Driver's private files
+
+Any DBDI/*.pm6 file is assumed to be a driver.
+Driver names should be lowercase.
+All-caps names are reserved for future use.
 
 
 Establish base classes/roles
