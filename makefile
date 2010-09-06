@@ -1,5 +1,11 @@
+default:
+	@echo "Utility makefile for pre-release actions"
+	@echo "    make jdbclib - rebuild JDBC roles"
+	@echo "    make all     - all the above"
 
-jdbclib: jdbclib-typemap
-	rm -rf jdbclib
-	java2perl6api --add_types jdbclib-typemap --outdir jdbclib java.sql.DriverManager
-	git add jdbclib
+all: jdbclib
+
+jdbclib:
+	rm -rf lib/java
+	java2perl6api --add_types jdbclib-typemap --outdir lib java.sql.DriverManager
+	git add lib/java
