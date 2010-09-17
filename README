@@ -30,4 +30,8 @@ can be used from Perl 6 (though with limited functionality at the moment).
 
 See the TODO file: http://github.com/timbunce/DBDI/blob/master/TODO
 
+A screencast of a talk about DBDI, given at YAPC::EU in August 2010,
+is available at L<http://timbunce.blip.tv/file/3973550/> and the slides
+are available at L<http://www.slideshare.net/Tim.Bunce/perl6-dbdi-yapceu-201008>
+
 =cut
